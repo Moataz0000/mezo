@@ -486,11 +486,6 @@
             font-size: 0.95rem;
         }
 
-
-
-
- 
-
         /* Project card animations */
         @keyframes fadeInUp {
             from {
@@ -530,6 +525,180 @@
                 justify-content: center;
             }
         }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(94, 33, 141, 0.1) 0%, transparent 70%);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(20, 25, 50, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .contact-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 3rem;
+            position: relative;
+            color: white;
+        }
+
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #8a5bff, transparent);
+            border-radius: 50%;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-method {
+            background: rgba(30, 35, 60, 0.4);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(138, 91, 255, 0.2);
+            transform: translateZ(0);
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px) translateZ(10px);
+            box-shadow: 0 15px 30px rgba(138, 91, 255, 0.2);
+            border-color: rgba(138, 91, 255, 0.4);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(138, 91, 255, 0.2);
+            border-radius: 50%;
+            font-size: 1.8rem;
+            color: #8a5bff;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover .contact-icon {
+            background: rgba(138, 91, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .contact-method-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .contact-method-value {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            word-break: break-all;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: linear-gradient(45deg, #6e3bce, #8a5bff);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .contact-btn:hover {
+            background: linear-gradient(45deg, #5d2db1, #7a4ae6);
+            box-shadow: 0 0 20px rgba(138, 91, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .contact-btn.secondary {
+            background: transparent;
+            border: 1px solid #8a5bff;
+            color: #8a5bff;
+        }
+
+        .contact-btn.secondary:hover {
+            background: rgba(138, 91, 255, 0.1);
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        /* Floating animation for contact section */
+        @keyframes floatContact {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .contact-container {
+            animation: floatContact 6s infinite ease-in-out;
+        }
+
+        /* Responsive adjustments for contact */
+        @media (max-width: 768px) {
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                padding: 1.5rem;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
+
+        /* Particle effect for contact section */
+        .contact-particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: rgba(138, 91, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -540,6 +709,7 @@
         <button class="hamburger" aria-label="Menu">☰</button>
         <div class="nav-links">
             <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
@@ -547,7 +717,7 @@
         <div class="hero">
             <h1 class="animated-text" id="main-heading"></h1>
             <div class="subtitle">
-            Back-End Engineer with 2+ years' expertise in Python, Django, and DRF,
+            Back-End Developer with 2+ years' expertise in Python, Django, and DRF,
              delivering scalable web applications, robust APIs, and seamless integrations.
         </div>
                     <!-- Social Icons Section -->
@@ -574,9 +744,54 @@
                 <!-- Project cards will be added here by JavaScript -->
             </div>
         </section>
-    </div>
 
-    
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2 class="contact-title">Get In Touch</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="contact-method-title">Email</h3>
+                        <p class="contact-method-value">motazfawzy73@gmail.com</p>
+                        <a href="mailto:moataz.fawzy@example.com" class="contact-btn">Send Email</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="contact-method-title">Phone</h3>
+                        <p class="contact-method-value">+(20) 1001690789</p>
+                        <a href="tel:+11234567890" class="contact-btn">Call Me</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="contact-method-title">Resume</h3>
+                        <p class="contact-method-value">Download my professional resume</p>
+                        <a href="#" class="contact-btn secondary" id="download-resume">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script>
         // Sample project data
@@ -648,6 +863,30 @@
             document.querySelectorAll('.project-card').forEach(card => {
                 observer.observe(card);
             });
+        }
+
+        // Create floating particles for contact section
+        function createContactParticles() {
+            const contactSection = document.querySelector('.contact-section');
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'contact-particle';
+                
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                const size = Math.random() * 3 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                particle.style.opacity = Math.random() * 0.5 + 0.3;
+                particle.style.animation = `floatContact ${Math.random() * 10 + 5}s infinite ease-in-out`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                contactSection.appendChild(particle);
+            }
         }
 
         // Animate text character by character - FIXED WORD WRAPPING
@@ -764,6 +1003,7 @@
             createStars();
             animateText();
             createProjectCards();
+            createContactParticles();
             
             // Handle window resize
             let resizeTimer;
@@ -774,6 +1014,24 @@
                     createStars();
                     animateText();
                 }, 200);
+            });
+
+            // Resume download button
+            document.getElementById('download-resume').addEventListener('click', function(e) {
+                e.preventDefault();
+                // Replace with your actual resume URL
+                const resumeUrl = 'Backend.pdf';
+                
+                // Create a temporary anchor element
+                const link = document.createElement('a');
+                link.href = resumeUrl;
+                link.download = 'Moataz_Fawzy_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Optional: Track download event
+                console.log('Resume downloaded');
             });
         });
     </script>
