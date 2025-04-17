@@ -770,6 +770,7 @@
         <div class="nav-links">
             <a href="#Certificates">Certificates</a>
             <a href="#projects">Projects</a>
+            <a href="#packages">My Packages</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -821,7 +822,7 @@
         </div>
         </section>
 
-        <style>
+<style>
         .carousel-container {
             position: relative;
             max-width: 100%;
@@ -961,6 +962,257 @@
             </div>
         </section>
 
+
+<!-- Add this section after Certificates -->
+<section id="packages" class="packages-section">
+    <h2 class="section-title">My Development Packages</h2>
+    <div class="packages-container">
+    <div class="package-card">
+            <div class="package-header">
+                <div class="package-icon">🚀</div>
+                <h3 class="package-title">Django Layered Architecture</h3>
+                <div class="package-badges">
+                    <span class="badge">Architecture</span>
+                    <span class="badge">Design pattern</span>
+                    <span class="badge">SOLID </span>
+
+                </div>
+            </div>
+            <p class="package-description">
+Django Layered Start is a CLI tool that helps you quickly create Django projects and apps with a clean, 
+layered architecture following SOLID principles.
+ It automates the setup of both the project and apps in a structured and scalable way.
+            </p>
+            <a href="https://github.com/Moataz0000/django-layered-start" class="package-link" target="_blank">
+                View on GitHub 
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <div class="glow"></div>
+        </div>
+                        <div class="package-card">
+            <div class="package-header">
+                <div class="package-icon">🚀</div>
+                <h3 class="package-title">Django-GCC-PhoneNumbers</h3>
+                <div class="package-badges">
+                    <span class="badge">Validation</span>
+                    <span class="badge">Database</span>
+                </div>
+            </div>
+            <p class="package-description">
+Django_Phone_Number_Field_GCC is a Python package designed to validate phone numbers for GCC countries (Saudi Arabia, UAE, Qatar, Kuwait, Oman, Bahrain) and Egypt. It provides a custom Django field that can be easily integrated into your Django models, along with flexible validation options.
+
+
+            </p>
+
+            <a href="https://github.com/Moataz0000/Django-Phone-Number-Field-GCC" class="package-link" target="_blank">
+                View on GitHub 
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <div class="glow"></div>
+        </div>
+        <div class="package-card">
+            <div class="package-header">
+                <div class="package-icon">🚀</div>
+                <h3 class="package-title">Restquest - API</h3>
+                <div class="package-badges">
+                    <span class="badge">Testing</span>
+                    <span class="badge">API</span>
+                    <span class="badge">Development</span>
+                </div>
+            </div>
+            <p class="package-description">
+restquest is a command-line tool for testing REST API endpoints with various HTTP methods
+ (GET, POST, PUT, PATCH, DELETE). It simplifies API testing by allowing developers to quickly send requests and
+  view responses directly from the terminal.
+
+
+            </p>
+
+            <a href="https://github.com/Moataz0000/api_tester" class="package-link" target="_blank">
+                View on GitHub 
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <div class="glow"></div>
+        </div>
+
+                <div class="package-card">
+            <div class="package-header">
+                <div class="package-icon">🚀</div>
+                <h3 class="package-title">Egyptian Phone Validator</h3>
+                <div class="package-badges">
+                    <span class="badge">validator</span>
+                    <span class="badge">Model</span>
+                </div>
+            </div>
+            <p class="package-description">
+A Django package to validate Egyptian phone numbers.
+
+            </p>
+
+            <a href="https://github.com/Moataz0000/egyptian-phone-validator" class="package-link" target="_blank">
+                View on GitHub 
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <div class="glow"></div>
+        </div>    </div>
+</section>
+
+<style>
+/* Add this CSS to your style section */
+.packages-section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.package-card {
+    background: rgba(20, 25, 50, 0.6);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(138, 91, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    transform: translateZ(0);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(138, 91, 255, 0.2);
+    border-color: rgba(138, 91, 255, 0.4);
+}
+
+.package-header {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.package-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.package-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #8a5bff;
+}
+
+.package-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(138, 91, 255, 0.2);
+    color: #b18cff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.package-description {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.package-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #8a5bff;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.package-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #8a5bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(138, 91, 255, 0.1);
+}
+
+.package-link:hover {
+    background: rgba(138, 91, 255, 0.2);
+    padding-right: 1.5rem;
+}
+
+.link-arrow {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.package-link:hover .link-arrow {
+    transform: translateX(3px);
+}
+
+.glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(138, 91, 255, 0.2) 0%, transparent 70%);
+    filter: blur(30px);
+    top: -50px;
+    right: -50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.package-card:hover .glow {
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .packages-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .package-card {
+        padding: 1.5rem;
+    }
+}
+</style>
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="contact-container">
@@ -1009,6 +1261,9 @@
         </section>
     </div>
 
+
+
+
     <script>
         // Sample project data
         const projects = [
@@ -1045,6 +1300,8 @@
             }
             
         ];
+
+        
 
         // Function to create project cards
         function createProjectCards() {
